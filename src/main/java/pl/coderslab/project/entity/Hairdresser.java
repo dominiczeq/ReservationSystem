@@ -50,7 +50,7 @@ public class Hairdresser {
 
 	@Override
 	public String toString() {
-		return "Hairdresser [Imie i nazwisko: " + name + " " + surname + "]";
+		return "Imie i nazwisko: " + name + " " + surname;
 	}
 
 }
