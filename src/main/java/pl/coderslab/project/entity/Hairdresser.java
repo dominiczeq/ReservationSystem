@@ -48,4 +48,9 @@ public class Hairdresser {
 		this.surname = surname;
 	}
 
+	@Override
+	public String toString() {
+		return "Hairdresser [Imie i nazwisko: " + name + " " + surname + "]";
+	}
+
 }
