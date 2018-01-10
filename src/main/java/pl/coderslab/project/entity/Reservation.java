@@ -125,6 +125,16 @@ public class Reservation {
 	public void setStartTimeService(LocalTime startTimeService) {
 		this.startTimeService = startTimeService;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Rezerwacja nr: " + id + ", Klient: " + clientName + ", phoneNumber=" + phoneNumber
+				+ ", fryzjer: " + hairdresser + ", usługa: " + service + ", startDateService=" + startDateService
+				+ ", startTimeService=" + startTimeService;
+	}
+	
+	
 	
 	
 

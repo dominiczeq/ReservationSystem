@@ -43,8 +43,14 @@ public class HomeController {
 
 	@PostMapping("/addReservation")
 	public String addReservation(@ModelAttribute Reservation reservation, BindingResult bindingResult) {
+		
+		//if()
+		reservation.getStartTimeService().plusMinutes(reservation.getService().getTime());
+		//if(reservation.getStartTimeService())
+		
 	 	this.reservationRepo.save(reservation);
-		return "/addReservation";
+	 	//rezerwacja zostala dodana, dorobic widok
+		return "home";
 	}
 
 	@ModelAttribute("availableService")
@@ -55,6 +61,16 @@ public class HomeController {
 	@ModelAttribute("availableHairdresser")
 	public List<Hairdresser> getHairdressers() {
 		return this.hairdresserRepo.findAll();
+	}
+	
+	@GetMapping("/listReservation")
+	public String list() {
+		return "/listReservation";
+	}
+
+	@ModelAttribute("availableReservation")
+	public List<Reservation> getReservations() {
+		return this.reservationRepo.findAll();
 	}
 
 }
