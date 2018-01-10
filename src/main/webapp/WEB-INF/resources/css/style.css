@@ -1,0 +1,22 @@
+body {
+	background-color: gray;
+}
+
+.href {
+	color: black;
+	font-style: italic;
+}
+
+.header {
+	color: brown;
+	font-size: 16px;
+}
+
+.error {
+	color: red;
+	
+}
+h3.main {
+	color: brown;
+	
+}

@@ -5,24 +5,36 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<%@ include file="jspf/head_config.jspf" %>
+
 <title>Strona główna</title>
 </head>
-<body>
 
-<h2>Strona glowna</h2>
+<body>
+<%@ include file="jspf/header.jspf" %>
+
+<h3 class="main">Strona główna</h3>
+
   <p>
+  	Treść story tytułowej
+  	<br/>
 	Od czegoś trzeba zacząć ;)
 	<br/>
-		<a href="service/addform">Dodaj usługę</a>
+	</p>
+	
+		<a href="service/addform" class="href">Dodaj usługę</a>
 	<br/>
-		<a href="service/list">Lista usług</a>
+		<a href="service/list" class="href">Lista usług</a>
 	<br/>
-		<a href="hairdresser/addform">Dodaj pracownika</a>
+		<a href="hairdresser/addform" class="href">Dodaj pracownika</a>
 	<br/>
-		<a href="hairdresser/list">Lista pracowników</a>
+		<a href="hairdresser/list" class="href">Lista pracowników</a>
   <br/>
 
-</p>
+
+
+<%@ include file="jspf/footer.jspf" %>
 
 </body>
 </html>

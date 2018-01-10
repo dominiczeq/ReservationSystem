@@ -50,12 +50,12 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 		return viewResolver;
 	}
 
-//	@Override
-//	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-//		super.addResourceHandlers(registry);
-//		registry.addResourceHandler("resources/**")
-//				.addResourceLocations("/WEB-INF/resources/");
-//	}
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		super.addResourceHandlers(registry);
+		registry.addResourceHandler("resources/**")
+				.addResourceLocations("/WEB-INF/resources/");
+	}
 
 	@Override
 	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
