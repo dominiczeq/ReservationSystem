@@ -10,6 +10,9 @@
 	Od czegoś trzeba zacząć ;)
 	<br/>
 	</p>
+
+		<a href="addReservation" class="href">Dodaj rezerwacje</a>
+	<br/>
 	
 		<a href="${pageContext.request.contextPath}/service/addform" class="href">Dodaj usługę</a>
 	<br/>

@@ -24,6 +24,9 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
+import pl.coderslab.project.converter.HairdresserConverter;
+import pl.coderslab.project.converter.ServiceConverter;
+
 @Configuration
 @ComponentScan(basePackages = { "pl.coderslab.project.controller",
 								"pl.coderslab.project.entity",
@@ -71,13 +74,19 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addFormatters(FormatterRegistry registry) {
-	
+		registry.addConverter(serviceConverter());
+		registry.addConverter(hairdresserConverter());
 	}
 
-//	@Bean
-//	public PublisherConverter publisherConverter() {
-//		return new PublisherConverter();
-//	}
+	@Bean
+	public ServiceConverter serviceConverter() {
+		return new ServiceConverter();
+	}
+	
+	@Bean
+	public HairdresserConverter hairdresserConverter() {
+		return new HairdresserConverter();
+	}
 	
 	@Bean
 	public Validator validator() {
