@@ -8,16 +8,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Dodaj fryzjera</title>
+<title>Dodaj usługę</title>
 </head>
 <body>
 
-<p>Podaj dane nowego fryzjera: </p>
+<p>Podaj dane nowej usługi i czas: </p>
 
-	<form:form method="post" modelAttribute="hairdresser">
+	<form:form method="post" modelAttribute="service">
 	
-	Imię: <form:input path="name" type="text"/> <form:errors path="name"/> <br/>
-	Nazwisko: <form:input path="surname" type="text"/> <form:errors path="surname"/> <br/>
+	Nazwa usługi: <form:input path="serviceName" type="text"/> <form:errors path="serviceName"/> <br/>
+	Czas trwania usługi: <form:input path="time" type="number"/> <form:errors path="time"/> <br/>
 	
 		<input type='submit'/><br/>
 		

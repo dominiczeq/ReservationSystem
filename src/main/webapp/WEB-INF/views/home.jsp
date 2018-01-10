@@ -10,9 +10,17 @@
 <body>
 
 <h2>Strona glowna</h2>
-<p>
-Od czegoś trzeba zacząć ;)
-<br/>
+  <p>
+	Od czegoś trzeba zacząć ;)
+	<br/>
+		<a href="service/addform">Dodaj usługę</a>
+	<br/>
+		<a href="service/list">Lista usług</a>
+	<br/>
+		<a href="hairdresser/addform">Dodaj pracownika</a>
+	<br/>
+		<a href="hairdresser/list">Lista pracowników</a>
+  <br/>
 
 </p>
 

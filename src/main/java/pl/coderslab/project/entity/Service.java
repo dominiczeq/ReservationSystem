@@ -47,5 +47,10 @@ public class Service {
 		this.time = time;
 	}
 
+	@Override
+	public String toString() {
+		return "Usługa: " + serviceName + ", czas rezerwacji "+ time + " minut";
+	}
+
 
 }
