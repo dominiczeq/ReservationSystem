@@ -33,7 +33,10 @@ public class HairdresserController {
 
 	//TODO - add validation and binding result
 	@PostMapping("/addform")
-	public String addform(@ModelAttribute Hairdresser hairdresser) {
+	public String addform(@ Valid @ModelAttribute Hairdresser hairdresser, BindingResult bindingResult) {
+		if (bindingResult.hasErrors()) {
+			return "hairdresser/addHairdresser";
+		}
 		this.hairdresserRepo.save(hairdresser);
 		return "redirect:/hairdresser/list";
 	}

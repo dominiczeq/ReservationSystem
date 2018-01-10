@@ -35,7 +35,10 @@ public class ServiceController {
 
 	//TODO - add validation and binding result
 	@PostMapping("/addform")
-	public String addform(@ModelAttribute Service service) {
+	public String addform(@ Valid @ModelAttribute Service service, BindingResult bindingResult) {
+		if(bindingResult.hasErrors()) {
+			return "service/addService";
+		}
 		this.serviceRepo.save(service);
 		return "redirect:/service/list";
 	}
