@@ -3,6 +3,12 @@
 <%@ include file="jspf/head_config.jspf" %>
 <%@ include file="jspf/header.jspf" %>
 
+<script>
+$(document).ready (function() {
+    $(document).attr("title", "Nowa rezerwacja");
+});
+</script>
+
 <h3 class="header">Nowa rezerwacja: </h3>
 
 Wprowadź dane niezbędne do dokonania rezerwacji:
@@ -31,6 +37,12 @@ Wprowadź dane niezbędne do dokonania rezerwacji:
 		<input type='submit'/><br/>
 		
 	</form:form>
+	
+	
+	
+
+	
+	
 	
 		<button><a href="/ReservationSystem/">Powrót do strony głównej</a></button>
 	

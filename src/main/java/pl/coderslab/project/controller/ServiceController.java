@@ -1,7 +1,9 @@
 package pl.coderslab.project.controller;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +33,7 @@ public class ServiceController {
 	}
 
 	@PostMapping("/addform")
-	public String addform(@ Valid @ModelAttribute Service service, BindingResult bindingResult) {
+	public String addform(@ Valid @ModelAttribute Service service, BindingResult bindingResult) throws UnsupportedEncodingException {
 		if(bindingResult.hasErrors()) {
 			return "service/addService";
 		}

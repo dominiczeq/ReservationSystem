@@ -30,7 +30,9 @@ import pl.coderslab.project.converter.ServiceConverter;
 @Configuration
 @ComponentScan(basePackages = { "pl.coderslab.project.controller",
 								"pl.coderslab.project.entity",
-								"pl.coderslab.project.bean"})
+								"pl.coderslab.project.bean",
+								"pl.coderslab.project.filters"
+							  })
 
 @EnableWebMvc
 @EnableTransactionManagement
