@@ -58,7 +58,7 @@ public class Service {
 
 	@Override
 	public String toString() {
-		return "Usługa: " + serviceName + ", czas rezerwacji "+ time + " minut";
+		return serviceName + ", czas rezerwacji: "+ time + " minut";
 	}
 
 

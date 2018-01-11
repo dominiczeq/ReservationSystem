@@ -57,7 +57,7 @@ public class Hairdresser {
 	public String getFullName() {
 		return name + " " +surname;
 	}
-
+	
 	@Override
 	public String toString() {
 		return "Imie i nazwisko: " + name + " " + surname;

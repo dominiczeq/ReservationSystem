@@ -4,25 +4,37 @@
 <%@ include file="jspf/head_config.jspf" %>
 <%@ include file="jspf/header.jspf" %>
 
-<%-- 
-<p>Book list</p>
-
-	<c:forEach items="${availableBooks}" var="book">
-		<c:out value="${book.title}"></c:out></br>
-	</c:forEach>
-
-${book}</br>
-	--%>
-
 <h3 class="header">Lista rezerwacji</h3>
 
-	<c:forEach items="${availableReservation}" var="reservation">
-		<c:out value="${reservation}"/> 
-		<a href="${pageContext.request.contextPath}/reservation/${hairdresser.id}/del">Usuń</a>
-		<br/>
-	</c:forEach>
-	
-	
+<Table border="1">
+				<tr>
+
+					<th>Id rezerwacji</th>
+					<th>Imię i nazwisko kienta</th>
+					<th>Nr telefonu</th>
+					<th>Fryzjer</th>
+					<th>Usługa</th>
+					<th>Data usługi</th>
+					<th>Godzina rezerwacji </th>
+					<th>Usuń</th>
+					
+				</tr>
+				<c:forEach var="d" items="${availableReservation}">
+					<tr>
+
+						<td>${d.id}</td>
+						<td>${d.clientName}</td>
+						<td>${d.phoneNumber}</td>
+						<td>${d.hairdresser.fullName}</td>
+						<td>${d.service}</td>
+						<td>${d.startDateService}</td>
+						<td>${d.startTimeService}</td>
+						<td><a href="${pageContext.request.contextPath}/reservation/${d.id}/del">Usuń</a></td>
+
+					</tr>
+				</c:forEach>
+			</Table>
+
 	<button><a href="/ReservationSystem/">Powrót do strony głównej</a></button>
 
 <%@ include file="jspf/footer.jspf" %>

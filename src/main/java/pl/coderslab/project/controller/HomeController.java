@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import pl.coderslab.project.entity.Hairdresser;
@@ -50,7 +51,7 @@ public class HomeController {
 		
 	 	this.reservationRepo.save(reservation);
 	 	//rezerwacja zostala dodana, dorobic widok
-		return "home";
+		return "reservationComplete";
 	}
 
 	@ModelAttribute("availableService")
@@ -67,10 +68,25 @@ public class HomeController {
 	public String list() {
 		return "/listReservation";
 	}
+	
+	@GetMapping("/reservationComplete")
+	public String reservationComplete() {
+		return "/reservationComplete";
+	}
 
 	@ModelAttribute("availableReservation")
 	public List<Reservation> getReservations() {
 		return this.reservationRepo.findAll();
 	}
-
+	
+	@GetMapping("/reservation/{id}/del")
+	public String delReservation(@PathVariable long id) {
+		this.reservationRepo.delete(id);
+		return "delReservation";
+	}
+	
+	@GetMapping("/delReservation")
+	public String delReservation() {
+		return "/delReservation";
+	}
 }
