@@ -4,19 +4,10 @@
 
   <h2 class="main">Strona główna</h2>
 
-  <p>
-  	Treść story tytułowej
-  	<br/>
-	Od czegoś trzeba zacząć ;)
-	<br/>
-	</p>
-
 		<a href="addReservation" class="href">Dodaj rezerwacje</a>
 	<br/>
 		<a href="listReservation" class="href">Lista rezerwacji</a>
 	<br/>
-	
-	
 		<a href="${pageContext.request.contextPath}/service/addform" class="href">Dodaj usługę</a>
 	<br/>
 		<a href="service/list" class="href">Lista usług</a>

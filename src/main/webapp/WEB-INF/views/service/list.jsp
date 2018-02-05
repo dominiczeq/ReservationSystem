@@ -5,11 +5,27 @@
 
 	<h3 class="header">Usługi dostępne w systemie rezerwacyjnym:</h3>
 
-	<c:forEach items="${availableService}" var="service">
-		<c:out value="${service}" />
-		<a href="${pageContext.request.contextPath}/service/${service.id}/del">Usuń</a>
-		<br/>
-	</c:forEach>
+	
+	<Table border="1">
+				<tr>
+				
+					<th>Id</th>
+					<th>Usługa</th>
+					<th>Czas usługi</th>
+						
+				</tr>
+				<c:forEach var="d" items="${availableService}">
+					<tr>
+
+						<td>${d.id}</td>
+						<td>${d.serviceName}</td>
+						<td>${d.time}</td>
+						
+						<td><a href="${pageContext.request.contextPath}/service/${d.id}/del">Usuń</a></td>
+
+					</tr>
+				</c:forEach>
+			</Table>
 	
 	<button><a href="/ReservationSystem/">Powrót do strony głównej</a></button>
 	

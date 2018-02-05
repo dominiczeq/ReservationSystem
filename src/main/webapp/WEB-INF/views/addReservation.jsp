@@ -30,21 +30,13 @@ Wprowadź dane niezbędne do dokonania rezerwacji:
 							itemLabel="fullName"/>
 			</form:select><form:errors path="hairdresser"/> <br/>
 	
-			Data wizyty: <form:input path="startDateService" type="date"/>  <form:errors path="startDateService"/><br/>
-			Godzina wizyty: <form:input path="startTimeService" type="time"/> <form:errors path="startTimeService"/><br/>
-			
+			Data wizyty: <form:input path="dateService" type="date"/>  <form:errors path="dateService"/><br/>
 			
 		<input type='submit'/><br/>
 		
 	</form:form>
 	
-	
-	
+	<button><a href="/ReservationSystem/">Powrót do strony głównej</a></button>
 
-	
-	
-	
-		<button><a href="/ReservationSystem/">Powrót do strony głównej</a></button>
-	
-</body>
-</html>
+
+	<%@ include file="jspf/footer.jspf" %>

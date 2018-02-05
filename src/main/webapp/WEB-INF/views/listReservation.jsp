@@ -27,7 +27,7 @@
 						<td>${d.phoneNumber}</td>
 						<td>${d.hairdresser.fullName}</td>
 						<td>${d.service}</td>
-						<td>${d.startDateService}</td>
+						<td>${d.dateService}</td>
 						<td>${d.startTimeService}</td>
 						<td><a href="${pageContext.request.contextPath}/reservation/${d.id}/del">Usuń</a></td>
 

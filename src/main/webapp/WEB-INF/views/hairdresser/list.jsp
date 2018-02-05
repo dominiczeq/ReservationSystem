@@ -4,24 +4,29 @@
 <%@ include file="../jspf/head_config.jspf" %>
 <%@ include file="../jspf/header.jspf" %>
 
-<%-- 
-<p>Book list</p>
-
-	<c:forEach items="${availableBooks}" var="book">
-		<c:out value="${book.title}"></c:out></br>
-	</c:forEach>
-
-${book}</br>
-	--%>
 
 <h3 class="header">Lista fryzjerów</h3>
 
-	<c:forEach items="${availableHairdresser}" var="hairdresser">
-		<c:out value="${hairdresser}"/> 
-		<a href="${pageContext.request.contextPath}/hairdresser/${hairdresser.id}/del">Usuń</a>
-		<br/>
-	</c:forEach>
-	
+<Table border="1">
+				<tr>
+				
+					<th>Id</th>
+					<th>Fryzjer</th>
+					
+						
+				</tr>
+				<c:forEach var="d" items="${availableHairdresser}">
+					<tr>
+
+						<td>${d.id}</td>
+						<td>${d.fullName}</td>
+						
+						
+						<td><a href="${pageContext.request.contextPath}/hairdresser/${d.id}/del">Usuń</a></td>
+
+					</tr>
+				</c:forEach>
+			</Table>
 	
 	<button><a href="/ReservationSystem/">Powrót do strony głównej</a></button>
 

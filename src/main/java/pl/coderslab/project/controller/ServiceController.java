@@ -2,10 +2,7 @@ package pl.coderslab.project.controller;
 
 import java.io.UnsupportedEncodingException;
 import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,14 +30,15 @@ public class ServiceController {
 	}
 
 	@PostMapping("/addform")
-	public String addform(@ Valid @ModelAttribute Service service, BindingResult bindingResult) throws UnsupportedEncodingException {
-		if(bindingResult.hasErrors()) {
+	public String addform(@Valid @ModelAttribute Service service, BindingResult bindingResult)
+			throws UnsupportedEncodingException {
+		if (bindingResult.hasErrors()) {
 			return "service/addService";
 		}
 		this.serviceRepo.save(service);
 		return "redirect:/service/list";
 	}
-	
+
 	@GetMapping("/list")
 	public String list() {
 		return "/service/list";
@@ -50,12 +48,11 @@ public class ServiceController {
 	public List<Service> getHairdressers() {
 		return this.serviceRepo.findAll();
 	}
-	
+
 	@GetMapping("{id}/del")
 	public String del(@PathVariable long id) {
 		this.serviceRepo.delete(id);
 		return "redirect:/service/list";
 	}
-	
 
 }

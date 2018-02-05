@@ -1,5 +1,7 @@
 package pl.coderslab.project.entity;
 
+import java.time.LocalTime;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,16 +21,26 @@ public class Hairdresser {
 	private String name;
 	@NotEmpty
 	private String surname;
+	
+	private LocalTime startWork;
+	private LocalTime endWork;
+	
 
 	public Hairdresser() {
 		super();
+		this.startWork = LocalTime.of(10, 00);
+		this.endWork = LocalTime.of(18, 00);
 	}
+	
 
 	public Hairdresser(String name, String surname) {
 		super();
 		this.name = name;
 		this.surname = surname;
+		this.startWork = LocalTime.of(10, 00);
+		this.endWork = LocalTime.of(18, 00);
 	}
+	
 
 	public long getId() {
 		return id;
@@ -58,6 +70,23 @@ public class Hairdresser {
 		return name + " " +surname;
 	}
 	
+	
+	public LocalTime getStartWork() {
+		return startWork;
+	}
+
+	public void setStartWork(LocalTime startWork) {
+		this.startWork = startWork;
+	}
+
+	public LocalTime getEndWork() {
+		return endWork;
+	}
+
+	public void setEndWork(LocalTime endWork) {
+		this.endWork = endWork;
+	}
+
 	@Override
 	public String toString() {
 		return "Imie i nazwisko: " + name + " " + surname;
